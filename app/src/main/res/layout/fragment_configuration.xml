@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nimbees.baseapplication.ConfigurationActivity">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nimbeesBlue"
+        android:padding="5dip"
+        android:text="@string/configuration_header_notifications"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"
+        android:paddingLeft="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/toggle_notifications_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dip">
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notification_switch" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="@string/settings_toggle_notifications"
+            android:textColor="@color/fab_material_black"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="#999999" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nimbeesBlue"
+        android:padding="5dip"
+        android:text="@string/configuration_header_beacons"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"
+        android:paddingLeft="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/beacon_monitoring_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dip">
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/beacons_switch" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/configuration_beacon_text"
+            android:layout_marginLeft="10dip"
+            android:text="@string/settings_toggle_beacons"
+            android:textColor="@color/fab_material_black"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="#999999" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nimbeesBlue"
+        android:padding="5dip"
+        android:text="@string/configuration_header_location"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"
+        android:paddingLeft="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/location_monitoring_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dip">
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/location_switch"
+            android:textColorHint="@color/nimbeesYellow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="@string/settings_toggle_location"
+            android:textColor="@color/fab_material_black"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="#999999" />
+
+
+
+</LinearLayout>
+

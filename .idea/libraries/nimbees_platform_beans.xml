@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="nimbees_platform_beans">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/nimbees_platform_beans.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

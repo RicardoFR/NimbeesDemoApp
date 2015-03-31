@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:foregroundGravity="left|right">
+
+    <FrameLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#01579b">
+
+        <FrameLayout
+
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/frame1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/fab_material_blue_500">
+
+            <TextView
+                android:id="@+id/beacon_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:textColor="@color/abc_primary_text_disable_only_material_dark"
+                android:layout_marginLeft="5dp"
+                android:textSize="18sp">
+
+            </TextView>
+        </FrameLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/linear_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/ic_input_white_36dp" />
+
+                <TextView
+                    android:id="@+id/beacon_enter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/background_floating_material_light"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_output_white_36dp" />
+
+                <TextView
+                    android:id="@+id/beacon_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/background_floating_material_light"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>
+

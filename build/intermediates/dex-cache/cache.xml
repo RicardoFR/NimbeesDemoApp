@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="95482e7c792a7c0d5a9d5461e97726bd54fe9549">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-16541f63df9470c9bb5797a42766ecff0826f4af.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="90a3822c38ec8c996e84c16a3477ef632cbc87a3">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/commons-lang3-3.3.2-6114939dfef206ec87843ce15829b514736ae824.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.4.0/ddd166d01b3158d1c00576d29f7ed15c030df719/eventbus-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/eventbus-2.4.0-b91361475120b59b9c450cc91087a43fe3786cb0.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-57e309c9464ee00ce1aa5d20c78622961d22091f.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/libs/android-beacon-library.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="12a81802f14bd7d077f8ecec3e4e969a9bd08adb">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/android-beacon-library-b4a31d985c30a63d1e72c70c7e705045885623b1.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.2.0/959c454243581fdf730abfd4f4745441724bcf2c/okhttp-2.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="959c454243581fdf730abfd4f4745441724bcf2c">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/okhttp-2.2.0-66ad9e5ccbc3c1dbb89ba71efbf236774a680edf.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-1fbbeca193f7dffa15b50515672b5cfef0b4faca.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/de.greenrobot/greendao/1.3.7/dda08161d004c4df96938da6909f1c2b96cd33c8/greendao-1.3.7.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dda08161d004c4df96938da6909f1c2b96cd33c8">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/greendao-1.3.7-f567ade312f748d6af0ae85de928801a2717c308.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/libs/nimbees_platform_beans.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="60ae90ab065e1411d3665e94800edb4d1d91cd94">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/nimbees_platform_beans-c7e4d9b64cac47b933916cfe4224e4693da4c633.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.9.0/a681c044244d9fc375198588297a39ba78028423/retrofit-1.9.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a681c044244d9fc375198588297a39ba78028423">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/retrofit-1.9.0-aae4b4107bfcb5db0a76fd778cb8ac007f39f363.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4a568f733067f786d53e191ccf998e7ea3da68cc">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-5573a4da2f9656c442f501dff835e24903a975f3.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.0.4/a607b0e12d2de769dc219e00b60a9b3d9e730d/rxjava-1.0.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00a607b0e12d2de769dc219e00b60a9b3d9e730d">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/rxjava-1.0.4-228a228be9857ee3f1441785947ba774ddb34d19.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-14c18e2243d078aaa228c7476d03a0871236b536.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/gson-2.3.1-917d69959a7cdb60f9c5bd38beac089ee58118d0.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.pnikosis/materialish-progress/1.4/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="77affff61296fc799ad6acd2066c1bcb8d5a7a6d">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-0fc97898fb46a12ba615430f50e5e9630e48c742.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a75b29dc51b364df032af8bcfcad7e54ccfda28d">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-e909d5a2c823167d0fad2ac809e4af7ebf4b7108.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-246f13cf2679cece7487aacbf7e25e8d7790a285.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/libs/nimbees-platform-deckardcain-1.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e60c78a00abc93d394ca99e831721d3454d2bd94">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/nimbees-platform-deckardcain-1.3.1-e42a56021fb28079cee04045bb05b7933d0c5970.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-a07c28c93bbecf29d83620636d474cbf0f30ab61.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.github.shell-software/fab/1.0.5/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="21b7e1533326a38d45ea24d04c6acfcbf8ea33af">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-996e1bf5be8710bfbc57e347a6d03c8be7188610.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.2.0/c0b52915a48fa91b1b94a28d4a2997bac5f524df/okio-1.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c0b52915a48fa91b1b94a28d4a2997bac5f524df">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/okio-1.2.0-61390fd78ee8a671ca3dd177fbdea0ef462c5567.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.github.navasmdc/MaterialDesign/1.4/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="87405405e403de68f4057757b8a2e8de02bd65d0">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-ec95900330cdb7a4fbd623ab1bd4ecb50bddf278.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-c18c7c8c33953219d388257287e342310ef5b022.jar" />
+    </item>
+
+</items>

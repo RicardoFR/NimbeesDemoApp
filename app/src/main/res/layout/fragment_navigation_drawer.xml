@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/nimbeesBlue"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/nimbees_white"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#ccc"
+        />
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/list_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:divider="#ccc"
+        android:dividerHeight="1dp"
+        tools:context="com.nimbees.newdemo.fragments.NavigationDrawerFragment" />
+</LinearLayout>
+

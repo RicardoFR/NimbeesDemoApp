@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nimbees.newdemo.fragments.RegisterFragment">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|bottom"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/button_get_beacons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/oceanBlue"
+                android:text="@string/get_beacons_button"
+                android:textColor="@color/abc_primary_text_material_dark" />
+
+            <com.pnikosis.materialishprogress.ProgressWheel
+                android:id="@+id/progress_wheel_beacons"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                wheel:matProg_barColor="#01579b"
+                wheel:matProg_progressIndeterminate="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.nimbees.newdemo.fragments.RegisterFragment">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_beacon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
