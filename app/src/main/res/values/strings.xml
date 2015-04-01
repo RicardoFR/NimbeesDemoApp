@@ -11,7 +11,7 @@
     <string name="open">Open</string>
     <string name="enter_value">Enter a value for </string>
     <string name="not_registered">User not registered</string>
-    <string name="register_fail">Register failed</string>
+    <string name="register_fail">Registration failed. Please check that your APP KEY, APP SECRET and GCM SENDER ID are correctly configured on the app.properties file</string>
     <string name="beacon_error">Not supported by your device</string>
 
 
@@ -25,6 +25,7 @@
     <string name="title_section4">Beacons</string>
     <string name="title_section5">Map</string>
     <string name="title_section6">Configuration</string>
+    <string name="title_empty">User not registered</string>
 
     <!-- Configuration Fragment -->
 
@@ -46,17 +47,19 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_example"></string>
-
-<!-- TODO: Remove or change this placeholder text -->
-    <color name="oceanBlue">#01579b</color>
-    <color name="nimbeesYellow">#edac00</color>
-    <color name="nimbeesBlue">#005b82</color>
-
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
+    <string name="warning_user_not_registered">Please register before accessing any other screen of the app. Thanks!</string>
+    <string name="warning_no_notifications">You haven\'t received any notifications yet...</string>
+    <string name="warning_no_beacons">There are no beacons saved for the app. Please try loading them with the <b>Get Beacons</b> button if you have beacons defined but they are not being shown here.</string>
+    <string name="warning_no_tags">There are no tags saved for the app. Please try loading them with the <b>Get Tags</b> button if you have tags defined but they are not being shown here.</string>
+    <string name="warning_no_tag_values">The selected tag does not have any values assigned for the current user</string>
+    <string name="boolean_value_true">True</string>
+    <string name="boolean_value_false">False</string>
+    <string name="error_loading_beacons">Error loading beacons from server, please try again later.</string>
+    <string name="error_removing_tag_value">Error removing tag value</string>
+    <string name="error_adding_tag_value">Error adding tag value</string>
+    <string name="error_loading_tag_values">Error loading tag values from the server</string>
+    <string name="error_loading_tags">Error loading tags from the server</string>
+    <string name="warning_no_map">Trying to load Google Maps... if this takes too long, it\'s probably misconfigured: please check that the API key set in the AndroidManifest.xml file is correct!</string>
+    <string name="error_starting_beacon_monitoring">"Cannot enable beacon monitoring: "</string>
 
 </resources>

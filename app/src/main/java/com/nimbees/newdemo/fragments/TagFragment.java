@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gc.materialdesign.views.ButtonRectangle;
@@ -34,85 +35,69 @@ import es.gloin.nimbees.common.beans.tag.TagBean;
 
 
 /**
- *
  * This TagFragment lets see all the tags that belongs to your app
  * and the values that you have defined.
- *
+ * <p/>
  * Say your preferences to the bees!
  */
 
 public class TagFragment extends Fragment {
 
-    /** Index to remember the position of the selected item in the list.*/
-    private int INDEX = 0;
+    /** Index to remember the position of the selected item in the list. */
+    private int mSelectedTagIndex = 0;
 
-    /**
-     * Spinner element to show all Tags.
-     */
+    /** Spinner element to show all Tags. */
     private Spinner mSpinner;
 
-    /**
-     * Wheel to show load process
-     */
+    /** Wheel to show the loading process. */
     private ProgressWheel mWheel;
 
-    /**
-     * Button to get Tags
-     */
+    /** Button used to load the Tags from the server. */
     private ButtonRectangle mButtonGetTags;
 
-    /**
-     * Button to add a Value to a Tag
-     */
+    /** Button used to add a Value to a Tag. */
     private ButtonRectangle mButtonAddValue;
 
-    /**
-     * RecyclerView to be used with the values of Tags.
-     */
+    /** RecyclerView to be used with the values of Tags. */
     private RecyclerView mRecyclerView;
 
-    /**
-     * LinearLayout to be used with the RecyclerView.
-     */
+    /** View to show when no values are defined for the selected tag. */
+    private TextView mEmptyView;
+
+    /** LinearLayout to be used with the RecyclerView. */
     private LinearLayoutManager mLayoutManager;
 
-    /**
-     * List of Tags name
-     */
-    private ArrayList<String> mItemsName;
+    /** List of Tag names. */
+    private ArrayList<String> mItemNames;
 
-    /**
-     * List of Tags elements
-     */
+    /** List of Tags. */
     private List<NimbeesTag> mTagList;
 
-    /**
-     * List of values of each TAG
-     */
+    /** List of values of each Tag. */
     private List<String> mTagValues;
 
-    /**
-     * ArrayAdapter to show Tags names in the spinner.
-     */
+    /** ArrayAdapter to show the Tag names in the spinner. */
     private ArrayAdapter<String> mAdapter;
 
-    /**
-     * Adapter to show values of tags in UI.
-     */
+    /** Adapter to show values of tags in UI. */
     private ValuesAdapter mItemsAdapter;
+
+    /** LinearLayout with the list of tags and their values. */
+    private View mTagContentLayout;
+
+    /** LinearLayout shown when there are no tags. */
+    private View mNoTagsLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mTagValues = new ArrayList<String>();
-        mItemsName = new ArrayList<String>();
+        mItemNames = new ArrayList<String>();
 
-        //Call to the getTags() to populate the items list using the adapter
+        // Call getTags() to populate the items list using the adapter
         mTagList = NimbeesClient.getTagManager().getTags();
         ((NavigationActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.title_section3));
-
-
     }
 
     @Override
@@ -126,11 +111,23 @@ public class TagFragment extends Fragment {
         mButtonAddValue = (ButtonRectangle) view.findViewById(R.id.add_value_button);
         mWheel = (ProgressWheel) view.findViewById(R.id.progress_wheel_tags);
 
+        mTagContentLayout = view.findViewById(R.id.tags_content);
+        mNoTagsLayout = view.findViewById(R.id.tags_empty);
+
+        if (mTagList.isEmpty()) {
+            mTagContentLayout.setVisibility(View.GONE);
+            mNoTagsLayout.setVisibility(View.VISIBLE);
+        } else {
+            mTagContentLayout.setVisibility(View.VISIBLE);
+            mNoTagsLayout.setVisibility(View.GONE);
+        }
+
         // Adapter and list of Tags
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.tag_RecyclerView);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.tag_recycler_view);
+        mEmptyView = (TextView) view.findViewById(android.R.id.empty);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mItemsAdapter = new ValuesAdapter(mItemsName);
+        mItemsAdapter = new ValuesAdapter(mItemNames);
         mRecyclerView.setAdapter(mItemsAdapter);
 
         // Adapter and list for the Spinner element
@@ -154,17 +151,32 @@ public class TagFragment extends Fragment {
                             @Override
                             public void onDismissedBySwipeLeft(RecyclerView recyclerView, int[] reverseSortedPositions) {
                                 for (int position : reverseSortedPositions) {
-                                    removeValueFromTag(mTagValues.get(INDEX).toString(), mItemsName.get(position));
-                                    mItemsName.remove(position);
+                                    removeValueFromTag(mTagValues.get(mSelectedTagIndex).toString(), mItemNames.get(position));
+                                    mItemNames.remove(position);
+                                    if (mItemNames.isEmpty()) {
+                                        mRecyclerView.setVisibility(View.GONE);
+                                        mEmptyView.setVisibility(View.VISIBLE);
+                                    } else {
+                                        mRecyclerView.setVisibility(View.VISIBLE);
+                                        mEmptyView.setVisibility(View.GONE);
+                                    }
+                                    mItemsAdapter.notifyDataSetChanged();
                                 }
-                                mItemsAdapter.notifyDataSetChanged();
+
                             }
 
                             @Override
                             public void onDismissedBySwipeRight(RecyclerView recyclerView, int[] reverseSortedPositions) {
                                 for (int position : reverseSortedPositions) {
-                                    removeValueFromTag(mTagValues.get(INDEX).toString(), mItemsName.get(position));
-                                    mItemsName.remove(position);
+                                    removeValueFromTag(mTagValues.get(mSelectedTagIndex).toString(), mItemNames.get(position));
+                                    mItemNames.remove(position);
+                                    if (mItemNames.isEmpty()) {
+                                        mRecyclerView.setVisibility(View.GONE);
+                                        mEmptyView.setVisibility(View.VISIBLE);
+                                    } else {
+                                        mRecyclerView.setVisibility(View.VISIBLE);
+                                        mEmptyView.setVisibility(View.GONE);
+                                    }
                                 }
                                 mItemsAdapter.notifyDataSetChanged();
                             }
@@ -176,17 +188,18 @@ public class TagFragment extends Fragment {
         // Listener of the spinner to do actions on a item selected
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-            // To do actions when a item from the Spinner is selected
+            @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
                 mWheel.setVisibility(View.VISIBLE);
                 loadDatafromTag(mTagValues.get(i).toString());
-                INDEX = i;
+                mSelectedTagIndex = i;
 
             }
 
-            // Default action when no element in the list is selected
+            @Override
             public void onNothingSelected(AdapterView<?> arg0) {
+                // Do nothing
             }
 
         });
@@ -195,11 +208,10 @@ public class TagFragment extends Fragment {
         mButtonAddValue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                showDialog(mTagValues.get(INDEX).toString());
-
+                showDialog(mTagValues.get(mSelectedTagIndex).toString());
             }
         });
+
         // Button to get Tags from Server
         mButtonGetTags.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -247,9 +259,9 @@ public class TagFragment extends Fragment {
      */
     private void setValuesOnList(List<String> stringList) {
 
-        mItemsName.clear();
+        mItemNames.clear();
         for (String s : stringList) {
-            mItemsName.add(s);
+            mItemNames.add(s);
         }
         mItemsAdapter.notifyDataSetChanged();
     }
@@ -263,6 +275,14 @@ public class TagFragment extends Fragment {
             @Override
             public void onSuccess(List<TagBean> tagBeans) {
 
+                if (tagBeans.isEmpty()) {
+                    mTagContentLayout.setVisibility(View.GONE);
+                    mNoTagsLayout.setVisibility(View.VISIBLE);
+                } else {
+                    mTagContentLayout.setVisibility(View.VISIBLE);
+                    mNoTagsLayout.setVisibility(View.GONE);
+                }
+
                 setElementsOnSpinner(tagBeans);
                 mWheel.setVisibility(View.INVISIBLE);
                 Toast.makeText(getActivity().getApplicationContext(), "Tags recovered : " + String.valueOf(tagBeans.size()), Toast.LENGTH_SHORT).show();
@@ -270,6 +290,7 @@ public class TagFragment extends Fragment {
 
             @Override
             public void onFailure(NimbeesException e) {
+                Toast.makeText(getActivity().getApplicationContext(), getResources().getString(R.string.error_loading_tags), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -284,12 +305,20 @@ public class TagFragment extends Fragment {
         NimbeesClient.getTagManager().getServerTagValues(tagname, new NimbeesCallback<List<String>>() {
             @Override
             public void onSuccess(List<String> strings) {
+                if (strings.isEmpty()) {
+                    mRecyclerView.setVisibility(View.GONE);
+                    mEmptyView.setVisibility(View.VISIBLE);
+                } else {
+                    mRecyclerView.setVisibility(View.VISIBLE);
+                    mEmptyView.setVisibility(View.GONE);
+                }
                 setValuesOnList(strings);
                 mWheel.setVisibility(View.INVISIBLE);
             }
 
             @Override
             public void onFailure(NimbeesException e) {
+                Toast.makeText(getActivity().getApplicationContext(), getResources().getString(R.string.error_loading_tag_values), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -305,12 +334,12 @@ public class TagFragment extends Fragment {
         NimbeesClient.getTagManager().addServerTagValue(tagname, tagvalue, new NimbeesCallback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
-                Toast.makeText(getActivity().getApplicationContext(), "Value added", Toast.LENGTH_LONG).show();
                 loadDatafromTag(tagname);
             }
 
             @Override
             public void onFailure(NimbeesException e) {
+                Toast.makeText(getActivity().getApplicationContext(), getResources().getString(R.string.error_adding_tag_value), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -318,20 +347,24 @@ public class TagFragment extends Fragment {
     /**
      * Remove a value from a Tag
      *
-     * @param tagname  the name of the tag
-     * @param tagvalue the value to remove from the tag
+     * @param tagName  the name of the tag
+     * @param tagValue the value to remove from the tag
      */
-    private void removeValueFromTag(final String tagname, String tagvalue) {
+    private void removeValueFromTag(final String tagName, final String tagValue) {
 
-        NimbeesClient.getTagManager().deleteServerTagValue(tagname, tagvalue, new NimbeesCallback<Boolean>() {
+        NimbeesClient.getTagManager().deleteServerTagValue(tagName, tagValue, new NimbeesCallback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
-                Toast.makeText(getActivity().getApplicationContext(), "Value removed", Toast.LENGTH_SHORT).show();
+                // Do nothing
             }
 
             @Override
             public void onFailure(NimbeesException e) {
-
+                // Re-add the value that was deleted, because deletion failed
+                mItemNames.add(tagValue);
+                mRecyclerView.setVisibility(View.VISIBLE);
+                mEmptyView.setVisibility(View.GONE);
+                Toast.makeText(getActivity().getApplicationContext(), getResources().getString(R.string.error_removing_tag_value), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -339,33 +372,51 @@ public class TagFragment extends Fragment {
     /**
      * Select a proper dialog to show it based on tag type
      *
-     * @param tag name of the tag
+     * @param tagName name of the tag
      */
-    private void showDialog(final String tag) {
+    private void showDialog(final String tagName) {
 
         String valuetype = "";
 
         for (NimbeesTag nt : mTagList) {
 
-            if (tag == nt.getName()) {
+            if (nt.getName().equals(tagName)) {
                 valuetype = nt.getValueType();
                 continue;
             }
         }
         switch (valuetype) {
             case "TEXT":
-                showTextDialog(tag);
+                showTextDialog(tagName);
                 break;
             case "FLOAT":
-                showFloatDialog(tag);
+                showFloatDialog(tagName);
                 break;
             case "INTEGER":
-                showIntegerDialog(tag);
+                showIntegerDialog(tagName);
                 break;
             case "BOOLEAN":
-                showBooleanDialog(tag);
+                showBooleanDialog(tagName);
+                break;
+            default:
+                showUnrecognisedTagTypeDialog();
                 break;
         }
+    }
+
+    /**
+     * Shows a dialog informing the user that the selected tag has an invalid type
+     */
+    void showUnrecognisedTagTypeDialog() {
+        AlertDialog ad = new AlertDialog.Builder(getActivity()).setTitle("Error")
+                .setMessage("The selected tag does not have a valid value type")
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).create();
+        ad.show();
     }
 
     /**
@@ -373,22 +424,21 @@ public class TagFragment extends Fragment {
      *
      * @param tag name of the tag
      */
-     void showTextDialog(final String tag) {
-
-        AlertDialog ad = new AlertDialog.Builder(getActivity()).create();
+    void showTextDialog(final String tag) {
         final EditText input = new EditText(getActivity());
         input.setScaleX(0.9f);
-        ad.setView(input);
+        input.setTextColor(getResources().getColor(android.R.color.black));
 
-        ad.setTitle(getString(R.string.enter_value) + tag);
-        ad.setCancelable(false);
-        ad.setButton(getActivity().getApplicationContext().getString(R.string.add_value_button), new DialogInterface.OnClickListener() {
+        AlertDialog ad = new AlertDialog.Builder(getActivity()).setView(input).setTitle(getString(R.string.enter_value) + tag)
+                .setCancelable(false)
+                .setPositiveButton(getActivity().getApplicationContext().getString(R.string.add_value_button), new DialogInterface.OnClickListener() {
 
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-                assignValueToTag(tag, input.getText().toString());
-            }
-        });
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        assignValueToTag(tag, input.getText().toString());
+                    }
+                })
+                .create();
         ad.setCanceledOnTouchOutside(true);
         ad.show();
     }
@@ -398,22 +448,22 @@ public class TagFragment extends Fragment {
      *
      * @param tag name of the tag
      */
-     void showFloatDialog(final String tag) {
-
-        AlertDialog ad = new AlertDialog.Builder(getActivity()).create();
+    void showFloatDialog(final String tag) {
         final EditText input = new EditText(getActivity());
         input.setScaleX(0.9f);
         input.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
-        ad.setView(input);
-        ad.setTitle(getString(R.string.enter_value) + tag);
-        ad.setCancelable(false);
-        ad.setButton(getActivity().getApplicationContext().getString(R.string.add_value_button), new DialogInterface.OnClickListener() {
+        input.setTextColor(getResources().getColor(android.R.color.black));
 
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-                assignValueToTag(tag, input.getText().toString());
-            }
-        });
+        AlertDialog ad = new AlertDialog.Builder(getActivity()).setView(input).setTitle(getString(R.string.enter_value) + tag)
+                .setCancelable(false)
+                .setPositiveButton(getActivity().getApplicationContext().getString(R.string.add_value_button), new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        assignValueToTag(tag, input.getText().toString());
+                    }
+                })
+                .create();
         ad.setCanceledOnTouchOutside(true);
         ad.show();
     }
@@ -423,22 +473,22 @@ public class TagFragment extends Fragment {
      *
      * @param tag name of the tag
      */
-     void showIntegerDialog(final String tag) {
-
-        AlertDialog ad = new AlertDialog.Builder(getActivity()).create();
+    void showIntegerDialog(final String tag) {
         final EditText input = new EditText(getActivity());
         input.setScaleX(0.9f);
         input.setInputType(InputType.TYPE_CLASS_NUMBER);
-        ad.setView(input);
-        ad.setTitle(getString(R.string.enter_value) + tag);
-        ad.setCancelable(false);
-        ad.setButton(getActivity().getApplicationContext().getString(R.string.add_value_button), new DialogInterface.OnClickListener() {
+        input.setTextColor(getResources().getColor(android.R.color.black));
 
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-                assignValueToTag(tag, input.getText().toString());
-            }
-        });
+        AlertDialog ad = new AlertDialog.Builder(getActivity()).setView(input).setTitle(getString(R.string.enter_value) + tag)
+                .setCancelable(false)
+                .setPositiveButton(getActivity().getApplicationContext().getString(R.string.add_value_button), new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        assignValueToTag(tag, input.getText().toString());
+                    }
+                })
+                .create();
         ad.setCanceledOnTouchOutside(true);
         ad.show();
     }
@@ -448,25 +498,24 @@ public class TagFragment extends Fragment {
      *
      * @param tag name of the tag
      */
-     void showBooleanDialog(final String tag) {
+    void showBooleanDialog(final String tag) {
+        AlertDialog ad = new AlertDialog.Builder(getActivity())
+                .setTitle(getString(R.string.enter_value) + " " + tag)
 
-        AlertDialog ad = new AlertDialog.Builder(getActivity()).create();
-        ad.setTitle(getString(R.string.enter_value) + " " + tag);
-
-        ad.setButton(DialogInterface.BUTTON_POSITIVE, "True",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int buttonId) {
-                        dialog.dismiss();
-                        assignValueToTag(tag, "true");
-                    }
-                });
-        ad.setButton(DialogInterface.BUTTON_NEGATIVE, "False",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int buttonId) {
-                        dialog.dismiss();
-                        assignValueToTag(tag, "false");
-                    }
-                });
+                .setPositiveButton(getActivity().getString(R.string.boolean_value_true),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int buttonId) {
+                                dialog.dismiss();
+                                assignValueToTag(tag, "true");
+                            }
+                        })
+                .setNegativeButton(getActivity().getString(R.string.boolean_value_false),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int buttonId) {
+                                dialog.dismiss();
+                                assignValueToTag(tag, "false");
+                            }
+                        }).create();
         ad.setCanceledOnTouchOutside(true);
         ad.show();
     }

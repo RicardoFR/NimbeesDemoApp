@@ -24,6 +24,7 @@ android:background="?android:attr/activatedBackgroundIndicator">
     android:layout_toRightOf="@id/navDrawerImageView"
     android:layout_centerVertical="true"
     android:layout_marginLeft="15sp"
+    android:textColor="?android:textColorPrimary"
     android:textSize="20sp" />
 
 

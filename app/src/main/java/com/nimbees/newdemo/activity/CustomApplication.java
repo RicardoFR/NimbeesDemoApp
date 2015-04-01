@@ -9,7 +9,7 @@ import com.nimbees.platform.NimbeesException;
 /**
  * NimbeesClient need to be initialized before any other class, thats why we extend Application here.
  *
- * Lets fly to the bees!
+ * Let the bees fly!
  */
 public class CustomApplication extends Application {
 
@@ -17,10 +17,9 @@ public class CustomApplication extends Application {
     public void onCreate() {
         try {
             NimbeesClient.init(this);
-            Log.e("CustomApplication", "Initializing nimBees Platform");
-
+            Log.i("NimbeesDemo", "nimBees Client successfully initialized.");
         } catch (NimbeesException e) {
-            Log.e("CustomApplication", "Error initializing nimBees Platform");
+            Log.e("NimbeesDemo", "Error initializing nimBees Platform: " + e.getMessage());
         }
         super.onCreate();
     }

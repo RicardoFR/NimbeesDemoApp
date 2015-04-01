@@ -5,12 +5,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.Circle;
@@ -33,32 +35,26 @@ import java.util.Map;
 
 
 /**
- * This MapFragment lets see all notifications received in the map
- * in the moment that you received it!
- *
+ * This MapFragment lets you see all geolocation notifications received in the map, together with the time that they
+ * were received.
+ * <p/>
  * See the bees around you!
  */
-
 public class MapFragment extends Fragment {
 
-    /**
-     * View for the map.
-     */
+    /** View with the Google Map. */
     private MapView mMapView;
 
-    /**
-     * Map.
-     */
+    /** View shown when there is an error with the map. */
+    private TextView mErrorView;
+
+    /** Google Map. */
     private GoogleMap mGoogleMap;
 
-    /**
-     * Map of markers for the map.
-     */
+    /** Map of map markers. */
     private Map<Marker, CircleOptions> mMarkers;
 
-    /**
-     * Circle to show in the markers.
-     */
+    /** Circle to show the precision on the markers. */
     private Circle mCircle;
 
     @Override
@@ -66,47 +62,52 @@ public class MapFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         ((NavigationActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.title_section5));
-
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
 
-
-
         mMapView = (MapView) rootView.findViewById(R.id.map);
+        mErrorView = (TextView) rootView.findViewById(R.id.map_error);
+
         mMapView.onCreate(savedInstanceState);
 
         // Gets to GoogleMap from the MapView and does initialization stuff
-        mGoogleMap = mMapView.getMap();
-        mGoogleMap.getUiSettings().setMyLocationButtonEnabled(false);
-        mGoogleMap.setMyLocationEnabled(false);
-
-        // Needs to call MapsInitializer before doing any CameraUpdateFactory calls
-        MapsInitializer.initialize(this.getActivity());
-
-        mGoogleMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
-
+        mMapView.getMapAsync(new OnMapReadyCallback() {
             @Override
-            public void onCameraChange(CameraPosition arg0) {
-                createMarkers(false);
-                showMarkers();
-                mGoogleMap.setOnCameraChangeListener(null);
-            }
-        });
+            public void onMapReady(GoogleMap googleMap) {
+                mErrorView.setVisibility(View.GONE);
+                mGoogleMap = googleMap;
+                mGoogleMap.getUiSettings().setMyLocationButtonEnabled(false);
+                mGoogleMap.setMyLocationEnabled(false);
 
-        mGoogleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                // Needs to call MapsInitializer before doing any CameraUpdateFactory calls
+                MapsInitializer.initialize(MapFragment.this.getActivity());
 
-            @Override
-            public boolean onMarkerClick(Marker marker) {
-                CircleOptions options = mMarkers.get(marker);
-                mCircle.setCenter(options.getCenter());
-                mCircle.setFillColor(options.getFillColor());
-                mCircle.setStrokeColor(options.getStrokeColor());
-                mCircle.setRadius(options.getRadius());
-                return false;
+                mGoogleMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
+
+                    @Override
+                    public void onCameraChange(CameraPosition arg0) {
+                        createMarkers(false);
+                        showMarkers();
+                        mGoogleMap.setOnCameraChangeListener(null);
+                    }
+                });
+
+                mGoogleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+
+                    @Override
+                    public boolean onMarkerClick(Marker marker) {
+                        CircleOptions options = mMarkers.get(marker);
+                        mCircle.setCenter(options.getCenter());
+                        mCircle.setFillColor(options.getFillColor());
+                        mCircle.setStrokeColor(options.getStrokeColor());
+                        mCircle.setRadius(options.getRadius());
+                        return false;
+                    }
+                });
+
             }
         });
 
@@ -135,9 +136,12 @@ public class MapFragment extends Fragment {
 
     /**
      * Creates the markers for the user locations.
+     *
+     * @param mergedMarkers Whether to show merged markers or standard ones.
      */
     private void createMarkers(boolean mergedMarkers) {
         mMarkers = new HashMap<Marker, CircleOptions>();
+        List<NimbeesLocation> locations;
         String name;
         int color;
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
@@ -146,56 +150,34 @@ public class MapFragment extends Fragment {
 
         if (!mergedMarkers) {
             color = getResources().getColor(R.color.fab_material_red_500);
-            List<NimbeesLocation> locations = NimbeesClient.getLocationManager().getLocationHistory(null, null);
-
-            Collections.reverse(locations);
-
-            for (NimbeesLocation nimbeesLocation : locations) {
-
-                CircleOptions circleOptions;
-
-                name = formatter.format(nimbeesLocation.getStartDate());
-
-                circleOptions = new CircleOptions()
-                        .center(new LatLng(nimbeesLocation.getLatitude(), nimbeesLocation.getLongitude()))
-                        .radius(nimbeesLocation.getRadius()).fillColor(0x33ffffff & color).strokeWidth(1.0f)
-                        .strokeColor(getResources().getColor(R.color.fab_material_red_500));
-
-                mMarkers.put(
-                        mGoogleMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(nimbeesLocation.getLatitude(), nimbeesLocation.getLongitude()))
-                                .title(name).draggable(false)
-                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_vertical))),
-                        circleOptions);
-
-
-            }
+            locations = NimbeesClient.getLocationManager().getLocationHistory(null, null);
         } else {
             color = getResources().getColor(R.color.fab_material_blue_500);
-            List<NimbeesLocation> locations = NimbeesClient.getLocationManager().getMergedLocationHistory(null, null);
-
-            Collections.reverse(locations);
-
-            for (NimbeesLocation nimbeesLocation : locations) {
-
-                CircleOptions circleOptions;
-
-                name = formatter.format(nimbeesLocation.getStartDate()) + " / "
-                        + formatter.format(nimbeesLocation.getEndDate());
-
-                circleOptions = new CircleOptions()
-                        .center(new LatLng(nimbeesLocation.getLatitude(), nimbeesLocation.getLongitude()))
-                        .radius(nimbeesLocation.getRadius()).fillColor(0x33ffffff & color).strokeWidth(1.0f)
-                        .strokeColor(getResources().getColor(R.color.fab_material_blue_500));
-
-                mMarkers.put(
-                        mGoogleMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(nimbeesLocation.getLatitude(), nimbeesLocation.getLongitude()))
-                                .title(name).draggable(false)
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))),
-                        circleOptions);
-            }
+            locations = NimbeesClient.getLocationManager().getMergedLocationHistory(null, null);
         }
+
+        Collections.reverse(locations);
+
+        for (NimbeesLocation nimbeesLocation : locations) {
+
+            CircleOptions circleOptions;
+
+            name = formatter.format(nimbeesLocation.getStartDate());
+
+            circleOptions = new CircleOptions()
+                    .center(new LatLng(nimbeesLocation.getLatitude(), nimbeesLocation.getLongitude()))
+                    .radius(nimbeesLocation.getRadius()).fillColor(0x33ffffff & color).strokeWidth(1.0f)
+                    .strokeColor(getResources().getColor(R.color.fab_material_red_500));
+
+            mMarkers.put(
+                    mGoogleMap.addMarker(new MarkerOptions()
+                            .position(new LatLng(nimbeesLocation.getLatitude(), nimbeesLocation.getLongitude()))
+                            .title(name).draggable(false)
+                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_vertical))),
+                    circleOptions);
+
+        }
+
     }
 
     /**

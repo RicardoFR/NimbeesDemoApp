@@ -1,10 +1,13 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-
-        <item name="android:textColor">@color/fab_material_white</item>
+        <item name="colorPrimary">@color/app_primary</item>
+        <item name="colorPrimaryDark">@color/app_primary_dark</item>
+        <item name="colorAccent">@color/app_accent</item>
+        <item name="android:textColorPrimary">@color/fab_material_white</item>
         <item name="android:textColorHint">@color/fab_material_white</item>
         <item name="android:activatedBackgroundIndicator">@drawable/drawer_state</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
 
     <style name="SpinnerTextViewItem" parent="@android:style/Widget.TextView" >
@@ -21,7 +24,10 @@
 
     </style>
 
-
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
 
 
 </resources>

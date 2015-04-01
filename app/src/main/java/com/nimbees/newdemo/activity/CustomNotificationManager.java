@@ -1,7 +1,6 @@
 package com.nimbees.newdemo.activity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.nimbees.platform.NimbeesNotificationManager;
@@ -15,23 +14,20 @@ import com.nimbees.platform.NimbeesNotificationManager;
 
 public class CustomNotificationManager extends NimbeesNotificationManager {
 
-    /**
-     * The name received in the notification to check it.
-     */
+    /** Screen name received in the notification for the Maps screen. */
     private String MAP_SCREEN_NAME = "MAP";
 
     /**
-     * The context.
+     * Default constructor.
+     *
+     * @param context Application context.
      */
-    private Context mContext;
-
     public CustomNotificationManager(Context context) {
         super(context);
-        this.mContext = context;
     }
 
     /**
-     * Receive a custom Message and we can do anything here with it (by default, we call showNotification)
+     * Receive a custom Message, we can do anything here with it (by default, we call showNotification)
      *
      * @param idNotification the unique id of the notification
      * @param content        the content of the message
@@ -40,12 +36,13 @@ public class CustomNotificationManager extends NimbeesNotificationManager {
     public void handleCustomMessage(long idNotification, String content) {
         // Insert your code here and do cool things
         showNotification(idNotification, content);
-
     }
 
     /**
-     * In this example, in handleScreenTransition we call the NavigationActivity and we add
-     * in the Bundle the screen that we want to load when the device receive the notification.
+     * Receive a Screen Transition Message.
+     *
+     * In this example, we call the NavigationActivity and add in the arguments Bundle the
+     * screen that we want to load when the user opens the notification.
      *
      * @param idNotification the unique id of the notification
      * @param content        the content of the message
@@ -54,15 +51,12 @@ public class CustomNotificationManager extends NimbeesNotificationManager {
     @Override
     public void handleScreenTransitionMessage(long idNotification, String content, String screen) {
 
+        // Show the MAPS screen if it has been received, show a standard notification otherwise.
         if (screen.equals(MAP_SCREEN_NAME)) {
-
-            //creation of the bundle to attach it to the intent
             Bundle args = new Bundle();
             args.putInt(NavigationActivity.KEY_SCREEN_TO_SHOW, NavigationActivity.FRAGMENT_MAP);
             showNotification(idNotification, content, NavigationActivity.class, args);
-
         } else {
-
             showNotification(idNotification, content);
         }
     }

@@ -95,11 +95,9 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
         if (getArguments() != null && getArguments().containsKey(NavigationActivity.KEY_SCREEN_TO_SHOW)) {
             mCurrentSelectedPosition = getArguments().getInt(NavigationActivity.KEY_SCREEN_TO_SHOW);
         }
-
 
         // Select either the default item (0) or the last selected item.
         selectItem(mCurrentSelectedPosition);

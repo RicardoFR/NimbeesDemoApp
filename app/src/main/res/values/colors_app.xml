@@ -1,0 +1,13 @@
+<resources>
+
+    <color name="oceanBlue">#01579b</color>
+    <color name="nimbees_yellow">#edac00</color>
+    <color name="nimbees_blue">#005b82</color>
+
+    <color name="app_primary">#edac00</color>
+    <color name="app_primary_dark">#cb9300</color>
+    <color name="app_accent">#005b82</color>
+
+    <color name="navigation_item_text_color">#ffffff</color>
+    <color name="toolbar_text_color">#000000</color>
+</resources>

@@ -6,18 +6,17 @@
     tools:context="com.nimbees.baseapplication.ConfigurationActivity">
 
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/nimbeesBlue"
+        android:background="@color/nimbees_blue"
         android:padding="5dip"
         android:text="@string/configuration_header_notifications"
         android:textAllCaps="true"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold"
-        android:paddingLeft="5dp"
-        />
+        android:textColor="@android:color/white"
+        android:paddingLeft="5dp" />
 
     <LinearLayout
         android:id="@+id/toggle_notifications_layout"
@@ -43,23 +42,17 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dip"
-        android:background="#999999" />
-
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/nimbeesBlue"
+        android:background="@color/nimbees_blue"
         android:padding="5dip"
         android:text="@string/configuration_header_beacons"
+        android:textColor="@android:color/white"
         android:textAllCaps="true"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold"
-        android:paddingLeft="5dp"
-        />
+        android:paddingLeft="5dp" />
 
     <LinearLayout
         android:id="@+id/beacon_monitoring_layout"
@@ -86,24 +79,18 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dip"
-        android:background="#999999" />
-
-
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/nimbeesBlue"
+        android:background="@color/nimbees_blue"
         android:padding="5dip"
         android:text="@string/configuration_header_location"
         android:textAllCaps="true"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold"
         android:paddingLeft="5dp"
-        />
+        android:textColor="@android:color/white" />
 
     <LinearLayout
         android:id="@+id/location_monitoring_layout"
@@ -118,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/location_switch"
-            android:textColorHint="@color/nimbeesYellow"/>
+            android:textColorHint="@color/nimbees_yellow" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -134,8 +121,6 @@
         android:layout_width="match_parent"
         android:layout_height="2dip"
         android:background="#999999" />
-
-
 
 </LinearLayout>
 

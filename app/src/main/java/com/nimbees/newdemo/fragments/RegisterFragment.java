@@ -1,9 +1,7 @@
 package com.nimbees.newdemo.fragments;
 
 import android.accounts.AccountManager;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -19,15 +17,12 @@ import com.nimbees.newdemo.R;
 import com.nimbees.newdemo.activity.NavigationActivity;
 import com.nimbees.platform.NimbeesClient;
 import com.nimbees.platform.NimbeesException;
-import com.nimbees.platform.beans.NimbeesBeacon;
 import com.nimbees.platform.callbacks.NimbeesRegistrationCallback;
 import com.pnikosis.materialishprogress.ProgressWheel;
 
-import java.util.ArrayList;
-
 /**
- *
- * This NotificationFragment lets to the user a register using his Gmail account name.
+ * This fragment allows the user to register on nimBees using a Google account as username (the
+ * username can be anything else, though).
  *
  * Welcome to the hive!
  */
@@ -73,11 +68,11 @@ public class RegisterFragment extends Fragment {
         // We set in the textview the email stored in SharedPreferences, by default ""
         if (NimbeesClient.getUserManager().getUserData() != null) {
             mEmailText.setText(NimbeesClient.getUserManager().getUserData().getAlias());
+            mEmailText.setTextColor(getResources().getColor(android.R.color.black));
         } else {
             mEmailText.setText(getString(R.string.not_registered));
-
+            mEmailText.setTextColor(getResources().getColor(android.R.color.darker_gray));
         }
-
 
         mWheel.setVisibility(View.INVISIBLE);
 
@@ -92,7 +87,7 @@ public class RegisterFragment extends Fragment {
     }
 
     /**
-     * Register a user in the nimBees Platform with is username or email as ID
+     * Register a user in nimBees Platform.
      *
      * @param username name or email to register
      * @param v        the view
@@ -103,18 +98,20 @@ public class RegisterFragment extends Fragment {
             @Override
             public void onSuccess() {
                 mEmailText.setText(username);
+                mEmailText.setTextColor(getResources().getColor(android.R.color.black));
                 mWheel.setVisibility(View.INVISIBLE);
             }
 
             @Override
             public void onFailure(NimbeesException e) {
                 Toast.makeText(getActivity(), getResources().getText(R.string.register_fail), Toast.LENGTH_LONG).show();
+                mWheel.setVisibility(View.INVISIBLE);
             }
         });
     }
 
     /**
-     * Util of Android to pick an Gmail user account stored in the phone
+     * Shows the Google account picker to let the user pick an account.
      */
     private void showGoogleAccountPicker() {
         Intent googlePicker = AccountPicker.newChooseAccountIntent(null, null,
@@ -122,9 +119,6 @@ public class RegisterFragment extends Fragment {
         startActivityForResult(googlePicker, PICK_ACCOUNT_REQUEST);
     }
 
-    /**
-     * Called when showGoogleAccountPicker finish and return the String with the username to be registered
-     */
     @Override
     public void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
         if (requestCode == PICK_ACCOUNT_REQUEST && resultCode == NavigationActivity.RESULT_OK) {
