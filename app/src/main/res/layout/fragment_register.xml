@@ -14,7 +14,7 @@
         android:id="@+id/button_register"
         android:layout_below="@+id/editText_email"
         android:layout_centerHorizontal="true"
-        android:background="@color/oceanBlue"
+        android:background="@color/app_accent"
         />
 
     <ImageView

@@ -9,10 +9,8 @@
         android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginRight="10dip"
-        android:layout_marginEnd="10dip"
-        android:layout_marginLeft="10dip"
-        android:layout_marginStart="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
         />
 
     <TextView

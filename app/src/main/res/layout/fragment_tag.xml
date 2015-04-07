@@ -17,7 +17,7 @@
             android:text="@string/get_tags_button"
             android:textColor="@color/abc_primary_text_material_dark"
             android:id="@+id/button_get_tags"
-            android:background="@color/oceanBlue"
+            android:background="@color/app_accent"
             android:layout_marginLeft="15dp"
             android:layout_marginStart="15dp"
             android:layout_centerVertical="true"
@@ -28,7 +28,7 @@
             android:id="@+id/progress_wheel_tags"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            wheel:matProg_barColor="@color/nimbees_blue"
+            wheel:matProg_barColor="@color/app_accent"
             wheel:matProg_progressIndeterminate="true"
             android:layout_gravity="center_vertical"
             android:layout_centerVertical="true"
@@ -66,7 +66,7 @@
                 android:text="Add Value"
                 android:textColor="@color/abc_primary_text_material_dark"
                 android:id="@+id/add_value_button"
-                android:background="@color/oceanBlue"
+                android:background="@color/app_accent"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1" />
 

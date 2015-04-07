@@ -98,6 +98,11 @@
         <service android:name="com.nimbees.platform.location.NimbeesLocationTrackingService" />
         <service android:name="com.nimbees.platform.beacons.NimbeesBeaconService" />
 
+        <activity
+            android:name="com.nimbees.newdemo.activity.CustomNotificationDisplayActivity"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog">
+        </activity>
+
     </application>
 
 </manifest>

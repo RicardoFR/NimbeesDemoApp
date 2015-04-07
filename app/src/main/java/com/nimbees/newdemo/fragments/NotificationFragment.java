@@ -15,6 +15,7 @@ import com.nimbees.newdemo.adapters.NotificationAdapter;
 import com.nimbees.platform.NimbeesClient;
 import com.nimbees.platform.beans.NimbeesMessage;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -46,6 +47,7 @@ public class NotificationFragment extends Fragment {
 
         // Call to the MessageHistory to populate the mMessageList using the adapter
         mMessageList = NimbeesClient.getMessageManager().getMessageHistory(null, null);
+        Collections.reverse(mMessageList);
         ((NavigationActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.title_section2));
     }
 

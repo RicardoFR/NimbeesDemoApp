@@ -27,15 +27,17 @@ public class CustomNotificationManager extends NimbeesNotificationManager {
     }
 
     /**
-     * Receive a custom Message, we can do anything here with it (by default, we call showNotification)
+     * Receive a custom Message, we can do anything here with it.
      *
      * @param idNotification the unique id of the notification
      * @param content        the content of the message
      */
     @Override
     public void handleCustomMessage(long idNotification, String content) {
-        // Insert your code here and do cool things
-        showNotification(idNotification, content);
+        // Show the notification using a custom Activity... or do anything else you want with it!
+        Bundle extras = new Bundle();
+        extras.putString(CustomNotificationDisplayActivity.KEY_MESSAGE_CONTENT, content);
+        showNotification(idNotification, content, CustomNotificationDisplayActivity.class, extras);
     }
 
     /**

@@ -1,6 +1,8 @@
 package com.nimbees.newdemo.adapters;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nimbees.newdemo.R;
+import com.nimbees.platform.NimbeesClient;
+import com.nimbees.platform.NotificationDisplayActivity;
 import com.nimbees.platform.beans.NimbeesMessage;
 
 import java.text.SimpleDateFormat;
@@ -16,8 +20,6 @@ import java.util.List;
 /**
  * This adapter works with the RecyclerView of notifications to show each element in the UI
  */
-
-
 public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder> {
 
     private List<NimbeesMessage> mMessageList;
@@ -56,17 +58,26 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
     public NotificationViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.notification_item, viewGroup, false);
 
-        return new NotificationViewHolder(itemView);
+        return new NotificationViewHolder(itemView, new NotificationViewHolder.INotificationViewHolderClickListener() {
+            @Override
+            public void onNotificationClick(Integer position) {
+                Log.i("COSITO", String.valueOf(mMessageList.get(position).getId()));
+//                Intent intent = new Intent(NimbeesClient.getContext(), NotificationDisplayActivity.class);
+//                intent.putExtra(NotificationDisplayActivity.KEY_MESSAGE_CONTENT, mMessageList.get(position));
+//                startActivity(intent);
+            }
+        });
     }
 
-    public static class NotificationViewHolder extends RecyclerView.ViewHolder {
+    public static class NotificationViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView vDate;
         TextView vContent;
         ImageView vImageType;
         ImageView vDisplayed;
+        public INotificationViewHolderClickListener mListener;
 
-        public NotificationViewHolder(View v) {
+        public NotificationViewHolder(View v, INotificationViewHolderClickListener listener) {
             super(v);
 
             vDate = (TextView) v.findViewById(R.id.message_date);
@@ -74,6 +85,18 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
             vImageType = (ImageView) v.findViewById(R.id.notification_type);
             vDisplayed = (ImageView) v.findViewById(R.id.message_displayed);
 
+            mListener = listener;
+
+            v.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            mListener.onNotificationClick(getAdapterPosition());
+        }
+
+        private interface INotificationViewHolderClickListener {
+            void onNotificationClick(Integer position);
         }
     }
 }
