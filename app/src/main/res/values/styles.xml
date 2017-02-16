@@ -4,8 +4,8 @@
         <item name="colorPrimary">@color/app_primary</item>
         <item name="colorPrimaryDark">@color/app_primary_dark</item>
         <item name="colorAccent">@color/app_accent</item>
-        <item name="android:textColorPrimary">@color/fab_material_white</item>
-        <item name="android:textColorHint">@color/fab_material_white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
         <item name="android:activatedBackgroundIndicator">@drawable/drawer_state</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
@@ -19,8 +19,15 @@
         <item name="android:textColor">@color/oceanBlue</item>
     </style>
 
+    <!-- Custom fonts -->
+    <style name="TextAppearance.FontPath.ubuntuBold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Ubuntu-B.ttf</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
     <style name="ActionBarThemeOverlay" parent="">
-        <item name="android:textColorPrimary">@color/fab_material_white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
 
     </style>
 

@@ -2,165 +2,337 @@
 <items version="2" >
 
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/6.5.87/classes.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/libs/okhttp-2.4.0.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="95482e7c792a7c0d5a9d5461e97726bd54fe9549">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-16541f63df9470c9bb5797a42766ecff0826f4af.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="5c787dd65b4de02fb076ef0c4266ee158d33c072">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0_885146bc2c1c9fe5edb129717120d58a3d975298.jar" />
     </item>
     <item
-        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="90a3822c38ec8c996e84c16a3477ef632cbc87a3">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/commons-lang3-3.3.2-6114939dfef206ec87843ce15829b514736ae824.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_5e68a7ddc68decf03d0fce247a858bef41d44108.jar" />
     </item>
     <item
-        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.4.0/ddd166d01b3158d1c00576d29f7ed15c030df719/eventbus-2.4.0.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.8.0/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/eventbus-2.4.0-b91361475120b59b9c450cc91087a43fe3786cb0.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-9.8.0_82634d34e6e83c09618d1aeaf96798c76d0de0ef.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/classes.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/libs/retrofit-1.9.0.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-57e309c9464ee00ce1aa5d20c78622961d22091f.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="d69f9707f1470c066ae81292671a80942ca2236d">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/retrofit-1.9.0_0dc8ab961ae0db094f5bd2b66558bd3c7e86e3d6.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/libs/android-beacon-library.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="12a81802f14bd7d077f8ecec3e4e969a9bd08adb">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/android-beacon-library-b4a31d985c30a63d1e72c70c7e705045885623b1.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.1_011f932517fb32258c891d896075f012addd91d2.jar" />
     </item>
     <item
-        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.2.0/959c454243581fdf730abfd4f4745441724bcf2c/okhttp-2.2.0.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="959c454243581fdf730abfd4f4745441724bcf2c">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/okhttp-2.2.0-66ad9e5ccbc3c1dbb89ba71efbf236774a680edf.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.1_a1fcd7ec7e88207aca93801079b42c7e3e275355.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/libs/android-beacon-library.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-1fbbeca193f7dffa15b50515672b5cfef0b4faca.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="995c9bd19c4c0bf74fca850d0c2f5df0d6798ad1">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/android-beacon-library_f133932728293b05706231c6b30506f5042151a8.jar" />
     </item>
     <item
-        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/de.greenrobot/greendao/1.3.7/dda08161d004c4df96938da6909f1c2b96cd33c8/greendao-1.3.7.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/io.realm/realm-android-library/2.3.1/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="dda08161d004c4df96938da6909f1c2b96cd33c8">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/greendao-1.3.7-f567ade312f748d6af0ae85de928801a2717c308.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="205155180b7747a96c076484ba0014e4bcacb33d">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/io.realm-realm-android-library-2.3.1_3ca36465985b974f5ce5e5a89cc80ec7fc0584f5.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/libs/nimbees_platform_beans.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/libs/picasso-2.5.2.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="60ae90ab065e1411d3665e94800edb4d1d91cd94">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/nimbees_platform_beans-c7e4d9b64cac47b933916cfe4224e4693da4c633.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="4be4b04501b974e1be142024285f925b7ad9ff88">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_4fb6a60656e2a9d2e7dca3a2ad4f80c2cb0fe4a0.jar" />
     </item>
     <item
-        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.9.0/a681c044244d9fc375198588297a39ba78028423/retrofit-1.9.0.jar"
+        is-multidex="false"
+        jar="/home/ricardo/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="a681c044244d9fc375198588297a39ba78028423">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/retrofit-1.9.0-aae4b4107bfcb5db0a76fd778cb8ac007f39f363.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_9552a827f721e83242350e48403145b912c2d7f5.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/6.5.87/classes.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/libs/eventbus-2.4.0.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="4a568f733067f786d53e191ccf998e7ea3da68cc">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-5573a4da2f9656c442f501dff835e24903a975f3.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="9397f4cd6df8c4b255c49460943ccafc7e863522">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/eventbus-2.4.0_fd4efc459dee52dec231ecc8eed7db58fb2e23bc.jar" />
     </item>
     <item
-        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.0.4/a607b0e12d2de769dc219e00b60a9b3d9e730d/rxjava-1.0.4.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.pnikosis/materialish-progress/1.4/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="00a607b0e12d2de769dc219e00b60a9b3d9e730d">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/rxjava-1.0.4-228a228be9857ee3f1441785947ba774ddb34d19.jar" />
-    </item>
-    <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-14c18e2243d078aaa228c7476d03a0871236b536.jar" />
-    </item>
-    <item
-        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/gson-2.3.1-917d69959a7cdb60f9c5bd38beac089ee58118d0.jar" />
-    </item>
-    <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.pnikosis/materialish-progress/1.4/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
+        optimize="true"
+        revision="25.0.2"
         sha1="77affff61296fc799ad6acd2066c1bcb8d5a7a6d">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-0fc97898fb46a12ba615430f50e5e9630e48c742.jar" />
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.pnikosis-materialish-progress-1.4_9c70f6a99e237ba5c633981cfe1e4d0206b2baf7.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/6.5.87/classes.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="a75b29dc51b364df032af8bcfcad7e54ccfda28d">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-e909d5a2c823167d0fad2ac809e4af7ebf4b7108.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-9.8.0_0fd36502db3816735095973ec86fc52fb7b730da.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/libs/gson-2.7.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-246f13cf2679cece7487aacbf7e25e8d7790a285.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="5a0f4c5aa79fc90475aa8c56a68227326480f902">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/gson-2.7_eb7ba1df7770cf1300cfea8f32ead854aa57fe07.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/libs/nimbees-platform-deckardcain-1.3.1.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="e60c78a00abc93d394ca99e831721d3454d2bd94">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/nimbees-platform-deckardcain-1.3.1-e42a56021fb28079cee04045bb05b7933d0c5970.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.1_f2a44fc7601c98dd0a7ff427e97049f04a5db4d6.jar" />
     </item>
     <item
-        jar="/home/ricardo/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-a07c28c93bbecf29d83620636d474cbf0f30ab61.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="45934a29bb4f137813c530e7595c764bd7c9d02d">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-nimBees-platform-1.4.5-Beta-1_242fa119f6fbdb4737d8e1eb78c1a1849f4906ee.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.github.shell-software/fab/1.0.5/classes.jar"
+        is-multidex="false"
+        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/io.realm/realm-annotations/2.3.1/1c1c75a7e1dfee58c51822987dc658f93e036c81/realm-annotations-2.3.1.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="21b7e1533326a38d45ea24d04c6acfcbf8ea33af">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-996e1bf5be8710bfbc57e347a6d03c8be7188610.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="1c1c75a7e1dfee58c51822987dc658f93e036c81">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/realm-annotations-2.3.1_7b421d06655e589df09f749175417a156798742d.jar" />
     </item>
     <item
-        jar="/home/ricardo/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.2.0/c0b52915a48fa91b1b94a28d4a2997bac5f524df/okio-1.2.0.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="c0b52915a48fa91b1b94a28d4a2997bac5f524df">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/okio-1.2.0-61390fd78ee8a671ca3dd177fbdea0ef462c5567.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.8.0_4705f7c451a5c5ddf7930d8137da6003c34878f1.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.github.navasmdc/MaterialDesign/1.4/classes.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="87405405e403de68f4057757b8a2e8de02bd65d0">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-ec95900330cdb7a4fbd623ab1bd4ecb50bddf278.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_f96c88c1e939af07c0fd14adf44eb86e5532911e.jar" />
     </item>
     <item
-        jar="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/jars/classes.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
-        <dex dex="/home/ricardo/AndroidstudioProjects/NimbeesNewDemo/app/build/intermediates/pre-dexed/debug/classes-c18c7c8c33953219d388257287e342310ef5b022.jar" />
+        optimize="true"
+        revision="25.0.2"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-9.8.0_87892cba1b0cfb1c3d2f63619536b13cdc0a7310.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a8ae156c2726ac9c56daaf4b49452ec2cdb7bba9">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-25.1.1_fe38b06b4d870470f395e07238555467e6206e0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/libs/rxjava-1.0.12.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="edf7710af9fb9738bf5596902ebebc2aeb0517b0">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/rxjava-1.0.12_2357b8a5722a6356f1f0702d28dde6a938681ae4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/uk.co.chrisjenx/calligraphy/2.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ebcb0bcf52fab7c586f39717f7cb8de91748b1b1">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/uk.co.chrisjenx-calligraphy-2.2.0_28392c4f6ecf25c775ae5b11c262b1bc7e82d664.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/libs/okio-1.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="41009e308ddad37e1574abe83c14bc9ff2cc7c43">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/okio-1.5.0_ebb7073441f50815cee93fc8c0a4ebc79a43c2e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_d09dd2378d39260dec57a2d173ed835cce779a07.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_f2aa902f8a0ebf16922435d34bc2091fad7967c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/libs/commons-lang3-3.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a6e72794eeecaf83ed38b185d735a3d24b36669">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/commons-lang3-3.4_d8a85c8a4f7e422ddddd7ef915eadf89b405fe23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/nimBees-platform-1.4.5-Beta-1/jars/libs/greendao-1.3.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="321cd07d87053f54f92db9aa296b3b3f469b3fe4">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/greendao-1.3.7_d56cadfb9159e84b797184d40037bff22bef13cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.1.1_ca2d76e7fe51142ba15d720cc94e3806a964888d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_f6f537555fb167f9e89abed56e17ac0e08d9b7ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_7e4584cd88960f714aed0f43fe19ac644b38473a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.8.0_b2dded3cf65894b5a7bb06d589f493d6a1d00dc6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.8.0_1faa111e9465e269141bc08512b1233edd2a8931.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_c41d507e4a2c9cce6e89154c736a1f7d65bf208e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_65ac3d13abf9223b858afb10926c7a6cb0c7649c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-9.8.0_e9cc5b0f4ee5690ad239225624351d458b6bb3c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/exploded-aar/com.getkeepsafe.relinker/relinker/1.2.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b64dd5f01bc37de289f90fd59299b0c76d119611">
+        <dex dex="/home/ricardo/AndroidstudioProjects/nimBees-android-demo/app/build/intermediates/pre-dexed/debug/com.getkeepsafe.relinker-relinker-1.2.2_39b09af6879595fa06b2938cd6b0d14b5de6f29b.jar" />
     </item>
 
 </items>

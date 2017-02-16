@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="@color/app_accent"
-    tools:context="com.nimbees.newdemo.fragments.NavigationDrawerFragment">
+    tools:context=".ui.fragments.NavigationDrawerFragment">
 
     <ImageView
         android:layout_width="wrap_content"

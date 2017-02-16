@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.nimbees.baseapplication.ConfigurationActivity">
+    android:orientation="vertical">
 
 
     <TextView
@@ -37,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dip"
             android:text="@string/settings_toggle_notifications"
-            android:textColor="@color/fab_material_black"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </LinearLayout>
@@ -52,7 +51,8 @@
         android:textAllCaps="true"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold"
-        android:paddingLeft="5dp" />
+        android:paddingLeft="5dp"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/beacon_monitoring_layout"
@@ -61,7 +61,8 @@
         android:layout_gravity="center_vertical"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="15dip">
+        android:padding="15dip"
+        android:visibility="gone">
 
         <Switch
             android:layout_width="wrap_content"
@@ -74,7 +75,7 @@
             android:id="@+id/configuration_beacon_text"
             android:layout_marginLeft="10dip"
             android:text="@string/settings_toggle_beacons"
-            android:textColor="@color/fab_material_black"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </LinearLayout>
@@ -112,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dip"
             android:text="@string/settings_toggle_location"
-            android:textColor="@color/fab_material_black"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </LinearLayout>

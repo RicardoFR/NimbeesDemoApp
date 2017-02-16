@@ -10,4 +10,7 @@
 
     <color name="navigation_item_text_color">#ffffff</color>
     <color name="toolbar_text_color">#000000</color>
+
+    <color name="black">#000000</color>
+
 </resources>

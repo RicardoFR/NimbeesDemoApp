@@ -3,7 +3,7 @@
     xmlns:wheel="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nimbees.newdemo.fragments.TagFragment">
+    tools:context=".ui.fragments.TagFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,10 +11,11 @@
         android:id="@+id/tags_header"
         android:layout_height="wrap_content">
 
-        <com.gc.materialdesign.views.ButtonRectangle
+        <android.support.v7.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/get_tags_button"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:textColor="@color/abc_primary_text_material_dark"
             android:id="@+id/button_get_tags"
             android:background="@color/app_accent"
@@ -60,12 +61,14 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="2" />
 
-            <com.gc.materialdesign.views.ButtonRectangle
+            <android.support.v7.widget.AppCompatButton
                 android:layout_width="0dp"
+                android:padding="10sp"
                 android:layout_height="wrap_content"
-                android:text="Add Value"
+                android:text="@string/add_value"
                 android:textColor="@color/abc_primary_text_material_dark"
                 android:id="@+id/add_value_button"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:background="@color/app_accent"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1" />
@@ -80,7 +83,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-                android:id="@+id/tag_recycler_view" />
+                android:id="@+id/tag_recycler_view"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@android:id/empty"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:id="@android:id/empty"

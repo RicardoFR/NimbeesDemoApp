@@ -2,9 +2,11 @@
   <library name="materialish-progress-1.4">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.pnikosis/materialish-progress/1.4/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.pnikosis/materialish-progress/1.4/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.pnikosis/materialish-progress/1.4/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.pnikosis/materialish-progress/1.4/be737ed25a20f2140b42467f30d7450dd10d2269/materialish-progress-1.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
