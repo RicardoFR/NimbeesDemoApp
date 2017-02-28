@@ -7,6 +7,8 @@ import android.util.Log;
 import com.nimbees.platform.NimbeesClient;
 import com.nimbees.platform.NimbeesException;
 
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
@@ -26,6 +28,14 @@ public class App extends Application {
         } catch (NimbeesException e) {
             Log.e("NimbeesDemo", "Error initializing nimBees Platform: " + e.getMessage());
         }
+
+        /** Realm config */
+        Realm
+                .setDefaultConfiguration(new RealmConfiguration.Builder(this)
+                        .name("nimbees-android-demo.realm")
+                        .setModules(Realm.getDefaultModule(), new NimbeesClient.NimbeesLibraryModule())
+                        .deleteRealmIfMigrationNeeded()
+                        .build());
 
         /** The Calligraphy library initialization */
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()

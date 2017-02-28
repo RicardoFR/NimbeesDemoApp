@@ -41,26 +41,21 @@ import static com.nimbees.newdemo.manager.CustomNotificationManager.NOTIFICATION
  */
 public class NavigationActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-    /**
-     * The Navigation fragment
-     */
+    /** The Navigation fragment */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-    /**
-     * The intent to launch the activity
-     */
+    /** The intent to launch the activity */
     private Intent mIntent;
-    /**
-     * The Toolbar element
-     */
+    /** The Toolbar element */
     private Toolbar mToolbar;
-
+    /** The screen key */
     public static final String KEY_SCREEN_TO_SHOW = "SCREEN_KEY";
+    /** The map fragment key */
     public static final int FRAGMENT_MAP = 1;
 
     /**
      * We only have one instance of this activity so we need to override the intent from the notification to handle it
      *
-     * @param intent
+     * @param intent The intent
      */
     @Override
     protected void onNewIntent(Intent intent) {
@@ -86,6 +81,8 @@ public class NavigationActivity extends ActionBarActivity implements NavigationD
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
+        NimbeesClient.checkPlayServicesWithDialog(this,true);
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             // only for Marshmallow and newer versions
@@ -191,7 +188,6 @@ public class NavigationActivity extends ActionBarActivity implements NavigationD
                 fragment = new EmptyFragment();
             } else {
                 switch (position) {
-                    
                     case 1:
                         fragment = new InformationFragment();
                         break;
@@ -229,7 +225,6 @@ public class NavigationActivity extends ActionBarActivity implements NavigationD
         NotificationDialogFragment notificationDialogFragment = new NotificationDialogFragment(title, text);
         notificationDialogFragment.show(this.getFragmentManager(), "NotificationDialogFragment");
         extras.clear();
-
     }
 
     /**
@@ -246,7 +241,6 @@ public class NavigationActivity extends ActionBarActivity implements NavigationD
                 onNavigationDrawerItemSelected(2);
             }
         }
-
     }
 
     @Override
