@@ -13,6 +13,7 @@ import com.nimbees.platform.beacons.model.Nimbeacon;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Created by ricardo on 25/02/15.
  * <p/>
@@ -55,14 +56,14 @@ public class BeaconAdapter extends RecyclerView.Adapter<BeaconAdapter.BeaconView
         });
     }
 
-     static class BeaconViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    static class BeaconViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-         TextView vName;
-         TextView vEnter;
-         TextView vExit;
-         IBeaconViewHolderClickListener mListener;
+        TextView vName;
+        TextView vEnter;
+        TextView vExit;
+        IBeaconViewHolderClickListener mListener;
 
-         BeaconViewHolder(View v, IBeaconViewHolderClickListener listener) {
+        BeaconViewHolder(View v, IBeaconViewHolderClickListener listener) {
             super(v);
 
             vName = (TextView) v.findViewById(R.id.beacon_name);

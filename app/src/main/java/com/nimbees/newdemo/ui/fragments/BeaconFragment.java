@@ -23,6 +23,7 @@ import com.pnikosis.materialishprogress.ProgressWheel;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * This BeaconFragment lets you see all the Beacons defined in your app.
  * <p/>

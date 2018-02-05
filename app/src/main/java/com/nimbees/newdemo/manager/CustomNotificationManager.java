@@ -44,6 +44,14 @@ public class CustomNotificationManager extends NimbeesNotificationManager {
         super(context);
     }
 
+    @Override
+    public void handleSimpleMessage(long idNotification, String message, Map<String, String> additionalContent) {
+        if (message.equals("COSITO")) {
+            throw new RuntimeException();
+        }
+        showNotification(idNotification, message, additionalContent);
+    }
+
     /**
      * Receive a custom Message, we can do anything here with it.
      *

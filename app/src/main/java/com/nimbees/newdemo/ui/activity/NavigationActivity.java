@@ -6,7 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
@@ -39,7 +39,7 @@ import static com.nimbees.newdemo.manager.CustomNotificationManager.NOTIFICATION
 /**
  * Main activity of the application.
  */
-public class NavigationActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class NavigationActivity extends AppCompatActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /** The Navigation fragment */
     private NavigationDrawerFragment mNavigationDrawerFragment;
@@ -82,7 +82,7 @@ public class NavigationActivity extends ActionBarActivity implements NavigationD
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
 
-        NimbeesClient.checkPlayServicesWithDialog(this,true);
+       // NimbeesClient.checkPlayServicesWithDialog(this,true);
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             // only for Marshmallow and newer versions

@@ -20,22 +20,38 @@ public class App extends Application {
 
     private static Context mContext;
 
+    /** The Realm Configuration */
+    private RealmConfiguration mRealmConfiguration;
+
+    /** Realm database name */
+    public static final String DATABASE_NAME = "cedememorygo.realm";
+
     @Override
     public void onCreate() {
+
+        Realm.init(this);
+
         try {
             NimbeesClient.init(this);
+            NimbeesClient.setDebugMode(true);
             Log.i("NimbeesDemo", "nimBees Client successfully initialized.");
         } catch (NimbeesException e) {
             Log.e("NimbeesDemo", "Error initializing nimBees Platform: " + e.getMessage());
         }
 
-        /** Realm config */
-        Realm
-                .setDefaultConfiguration(new RealmConfiguration.Builder(this)
-                        .name("nimbees-android-demo.realm")
-                        .setModules(Realm.getDefaultModule(), new NimbeesClient.NimbeesLibraryModule())
-                        .deleteRealmIfMigrationNeeded()
-                        .build());
+        // Realm default configuration
+        mRealmConfiguration = new RealmConfiguration.Builder()
+                .name(DATABASE_NAME)
+                .schemaVersion(1)
+                .modules(
+                        Realm.getDefaultModule(),
+                        new NimbeesClient.NimbeesLibraryModule()
+                )
+                .deleteRealmIfMigrationNeeded()
+                .build();
+
+        // Realm config */
+        Realm.setDefaultConfiguration(mRealmConfiguration);
 
         /** The Calligraphy library initialization */
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
