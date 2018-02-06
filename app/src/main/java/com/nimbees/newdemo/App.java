@@ -24,7 +24,7 @@ public class App extends Application {
     private RealmConfiguration mRealmConfiguration;
 
     /** Realm database name */
-    public static final String DATABASE_NAME = "cedememorygo.realm";
+    public static final String DATABASE_NAME = "nimBees-demo.realm";
 
     @Override
     public void onCreate() {
