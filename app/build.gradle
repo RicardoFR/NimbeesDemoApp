@@ -4,10 +4,10 @@ apply plugin: 'realm-android'
 android {
     signingConfigs {
         config {
-            keyAlias 'nimbees Demo'
-            keyPassword 'q0n2Y5c210%BR6Ub'
-            storeFile file('/home/ricardo/Dev/AndroidstudioProjects/keystore/nimbeesdemo.jks')
-            storePassword 'q0n2Y5c210%BR6Ub'
+            keyAlias ''
+            keyPassword ''
+            storeFile file('/jks/')
+            storePassword ''
         }
     }
     compileSdkVersion 27
