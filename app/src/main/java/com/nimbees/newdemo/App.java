@@ -56,7 +56,7 @@ public class App extends Application {
         /** The Calligraphy library initialization */
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath("fonts/Ubuntu-Light.ttf")
-                // Aditional fonts
+                // Additional fonts
                 .setFontAttrId(R.attr.fontPath)
                 .build());
 
