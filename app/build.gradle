@@ -2,14 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias ''
-            keyPassword ''
-            storeFile file('/jks/')
-            storePassword ''
-        }
-    }
+
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
     defaultConfig {
@@ -31,10 +24,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
         }
         debug {
-            signingConfig signingConfigs.config
         }
     }
     productFlavors {
